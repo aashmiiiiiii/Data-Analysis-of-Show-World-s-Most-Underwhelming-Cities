@@ -6,11 +6,11 @@ Reads a Google Maps review export from Outscraper and runs keyword-based sentime
 
 ## What it does
 
-- Scans 100K+ reviews for experience-related keywords using regex with wildcard support (`recommend*`, `disappoint*`, etc.)
-- Handles negation so phrases like "not worth it" or "don't recommend" score correctly as negative
-- Scores each attraction on a 0–100 experience scale per category
-- Translates all keywords into 8 languages via Google Translate
-- Exports results to a formatted Excel file with colour-coded scores
+-Ingested 100K+ Google Maps reviews from an Outscraper Excel export across 200 tourist attractions.
+-Built a custom NLP keyword detection engine using compiled regex with wildcard support (e.g. recommend* matches recommended, recommending, etc.) across 8 experience categories and 209 patterns.
+-Implemented negation-aware false-positive filtering, phrases like "not worth it" or "don't recommend" are correctly scored as negative rather than triggering positive matches.
+-Translated all 209 experience keywords into 8 languages (Spanish, French, German, Japanese, Chinese, Arabic, Portuguese) via Google Translate API with deduplication to minimise API calls.
+-Generated styled Excel reports with colour-coded scoring, frozen panes, and alternating row formatting across 3 analysis-ready sheets: Attraction Summary, Category Breakdown, and Keyword Translations.
 
 ---
 
